@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>Book Details</h2>
+<p>Id: <span th:text="${getbook.bid}"></span></p>
+<p>Name: <span th:text="${getbook.bname}"></span></p>
+<p>Author: <span th:text="${getbook.author}"></span></p>
+<p>Price: <span th:text="${getbook.price}"></span></p>
+<p>Status: <span th:text="${getbook.status}"></span></p>
+<a href="/getallbooks">Back to List</a>
+</body>
+</html>

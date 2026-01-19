@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table border="1">
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Author</th>
+    <th>Price</th>
+    <th>Status</th>
+    <th>Action</th>
+</tr>
+
+<tr th:each="b : ${books}">
+    <td th:text="${b.bid}"></td>
+    <td th:text="${b.bname}"></td>
+    <td th:text="${b.author}"></td>
+    <td th:text="${b.price}"></td>
+    <td th:text="${b.status}"></td>
+    <td>
+        <a th:href="@{/getbook/{bid}(bid=${b.bid})}">View</a> |
+        <a th:href="@{/update/{bid}(bid=${b.bid})}">Edit</a>
+
+        <a th:href="@{/delete/{bid}(bid=${b.bid})}"
+           onclick="return confirm('Are you sure?')">Delete</a>
+    </td>
+</tr>
+</table>
+
+<br>
+<a href="/addbook">Add New Book</a>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>BOOK REGISTRATION FORM</h2>
+<form action="/savebook" th:object="${bookadded}" method="post">
+<table>
+<tr>
+<td>Book Id</td>
+<td><input type="text" th:field="*{bid}"></td>
+</tr>
+<tr>
+<td>Book Name</td>
+<td><input type="text" th:field="*{bname}"></td>
+</tr>
+<tr>
+<td>Author Name</td>
+<td><input type="text" th:field="*{author}"></td>
+</tr>
+<tr>
+<td>Book Price</td>
+<td><input type="text" th:field="*{price}"></td>
+</tr>
+<tr>
+<td><input type="radio" th:field="*{status}" value="yes">YES 
+    <input type="radio" th:field="*{status}" value="no">NO
+</td>
+</tr>
+<tr>
+<td><input type="submit" value="Save Book"></td>
+</tr>     
+</table>
+</form>
+</body>
+</html>

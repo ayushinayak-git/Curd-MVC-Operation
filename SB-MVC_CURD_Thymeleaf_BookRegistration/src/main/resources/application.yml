@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: SB-MVC_CURD_Thymeleaf_BookRegistration
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring23
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form th:action="@{/updatebook}" th:object="${update}" method="post">
+<input type="hidden" th:field="*{bid}"/>
+
+Book Name: <input type="text" th:field="*{bname}"/><br>
+Author: <input type="text" th:field="*{author}"/><br>
+Price: <input type="text" th:field="*{price}"/><br>
+
+Status:<input type="radio" th:field="*{status}" value="YES"/>YES
+       <input type="radio" th:field="*{status}" value="NO"/>NO
+<input type="submit" value="Update"/>
+</form>
+
+</body>
+</html>
