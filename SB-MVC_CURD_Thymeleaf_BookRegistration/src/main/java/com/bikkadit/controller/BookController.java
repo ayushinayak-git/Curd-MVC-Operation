@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.bikkadit.entity.Book;
 import com.bikkadit.service.BookService;
@@ -69,6 +70,12 @@ public class BookController {
   }
   @GetMapping("/delete/{bid}")
   public String delete(@PathVariable int bid,Model model)
+  {
+	  service.deleteBook(bid);
+	  return "redirect:/getallbooks";
+  }
+  @GetMapping("/delete")
+  public String deletebyQueryParam(@RequestParam int bid,Model model)
   {
 	  service.deleteBook(bid);
 	  return "redirect:/getallbooks";
