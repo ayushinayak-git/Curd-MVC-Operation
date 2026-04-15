@@ -29,7 +29,7 @@ public String home() {
 	@GetMapping("/addbook")
 	public String loadform(Model model)
 	{
-		Book book= new Book(001,"Spring boot book",999);
+		Book book= new Book();
 		model.addAttribute("bookadded", book);
 		return "addbook";
 		
