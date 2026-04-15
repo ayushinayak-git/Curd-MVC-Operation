@@ -25,7 +25,7 @@ public class BookController {
 	@GetMapping("/addbook")
 	public String loadform(Model model)
 	{
-		Book book= new Book();
+		Book book= new Book(001,"Spring boot book",999);
 		model.addAttribute("bookadded", book);
 		return "addbook";
 		
