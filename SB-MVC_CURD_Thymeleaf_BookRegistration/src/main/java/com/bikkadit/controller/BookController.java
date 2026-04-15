@@ -20,7 +20,11 @@ import com.bikkadit.service.BookService;
 public class BookController {
 	@Autowired
 	private BookService service;
-	
+
+	@GetMapping("/")
+public String home() {
+    return "redirect:/getallbooks";
+}
 	
 	@GetMapping("/addbook")
 	public String loadform(Model model)
